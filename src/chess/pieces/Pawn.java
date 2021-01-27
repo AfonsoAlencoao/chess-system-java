@@ -20,13 +20,13 @@ public class Pawn extends ChessPiece {
 		// WHITE PAWN
 		if (getColor() == Color.WHITE) {
 			
-			// Move up 1 row
+			// up 1 row
 			p.setValues(position.getRow() - 1, position.getColumn());
 			if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
 				mat[p.getRow()][p.getColumn()] = true;
 			}
 
-			// Move up 2 rows (first move)
+			// up 2 rows (first move)
 			p.setValues(position.getRow() - 2, position.getColumn());
 			Position p2 = new Position(position.getRow() - 1, position.getColumn());
 			if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)
@@ -35,7 +35,7 @@ public class Pawn extends ChessPiece {
 				mat[p.getRow()][p.getColumn()] = true;
 			}
 			
-			// Diagonals with opponent piece
+			// diagonals with opponent piece
 			p.setValues(position.getRow() - 1, position.getColumn() - 1);
 			if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
 				mat[p.getRow()][p.getColumn()] = true;
@@ -49,13 +49,13 @@ public class Pawn extends ChessPiece {
 		// BLACK PAWN
 		else {
 			
-			// Move up 1 row
+			// move up 1 row
 			p.setValues(position.getRow() + 1, position.getColumn());
 			if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
 				mat[p.getRow()][p.getColumn()] = true;
 			}
 
-			// Move up 2 rows (first move)
+			// move up 2 rows (first move)
 			p.setValues(position.getRow() + 2, position.getColumn());
 			Position p2 = new Position(position.getRow() + 1, position.getColumn());
 			if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)
@@ -64,7 +64,7 @@ public class Pawn extends ChessPiece {
 				mat[p.getRow()][p.getColumn()] = true;
 			}
 			
-			// Diagonals with opponent piece
+			// diagonals with opponent piece
 			p.setValues(position.getRow() + 1, position.getColumn() - 1);
 			if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
 				mat[p.getRow()][p.getColumn()] = true;
