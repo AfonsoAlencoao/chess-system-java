@@ -49,7 +49,7 @@ public class Pawn extends ChessPiece {
 				mat[p.getRow()][p.getColumn()] = true;
 			}
 		
-		// en passant
+		// En Passant
 		if (position.getRow() == 3) {
 			Position left = new Position(position.getRow(), position.getColumn() - 1);
 			if (getBoard().positionExists(left) && isThereOpponentPiece(left) 
@@ -91,7 +91,7 @@ public class Pawn extends ChessPiece {
 				mat[p.getRow()][p.getColumn()] = true;
 			}
 			
-			// en passant
+			// En Passant
 			if (position.getRow() == 4) {
 				Position left = new Position(position.getRow(), position.getColumn() - 1);
 				if (getBoard().positionExists(left) && isThereOpponentPiece(left) 
